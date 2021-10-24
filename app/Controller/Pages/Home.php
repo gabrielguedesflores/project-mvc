@@ -16,9 +16,7 @@ class Home extends Page
     public static function getHome(){
         $obOrganization = new Organization();
         $content = View::render('pages/home', [
-            'name'            => $obOrganization->name,
-            'description' => $obOrganization->description,
-            'site'                => $obOrganization->site
+            'name'            => $obOrganization->name
         ]);
 
         return parent::getPage('Gabs - Projeto MVC', $content); //retorna a view da pagina, passando os parâmetros esperados em page
