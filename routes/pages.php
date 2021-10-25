@@ -18,6 +18,20 @@ $obRouter->get('/sobre', [
     }
 ]);
 
+//rota depoimentos
+$obRouter->get('/depoimentos', [
+    function (){
+        return new Response(200, Pages\Testimony::getTestimonies());
+    }
+]);
+
+
+
+
+
+
+
+
 //rota Dinâmica
 $obRouter->get('/pagina/{idPagina}/{acao}', [
     function ($idPagina, $acao){
