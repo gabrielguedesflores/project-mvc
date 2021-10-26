@@ -1,19 +1,7 @@
 <?php 
-
-require __DIR__ . '/vendor/autoload.php';
+require __DIR__.'/includes/app.php';
 
 use \App\Http\Router;
-use \App\Utils\View;
-use \WilliamCosta\DotEnv\Environment;
-
-Environment::load(__DIR__);
-
-//define a constant da URL
-define('URL', getenv('URL'));
-
-View::init([
-    'URL' => URL
-]);
 
 $obRouter = new Router(URL);
 
