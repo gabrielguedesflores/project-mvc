@@ -28,8 +28,8 @@ $obRouter->get('/depoimentos', [
 //rota depoimentos (insert)
 $obRouter->post('/depoimentos', [
     function ($request){
-        echo "<pre>"; print_r($request); echo "</pre>"; exit;
-        return new Response(200, Pages\Testimony::getTestimonies());
+        //echo "<pre>"; print_r($request); echo "</pre>"; exit;
+        return new Response(200, Pages\Testimony::insertTestimony($request));
     }
 ]);
 
